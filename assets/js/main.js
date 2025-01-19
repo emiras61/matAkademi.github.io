@@ -293,4 +293,30 @@
    */
   new PureCounter();
 
+  // Küçük resimler için Swiper
+  var aboutSwiperThumbs = new Swiper(".aboutSwiperThumbs", {
+    spaceBetween: 10,
+    slidesPerView: 4,
+    freeMode: true,
+    watchSlidesProgress: true,
+    loop: true,
+  });
+
+  // Ana slayt için Swiper
+  var aboutSwiper = new Swiper(".aboutSwiper", {
+    spaceBetween: 10,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    thumbs: {
+      swiper: aboutSwiperThumbs,
+    },
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
+    loop: true,
+  });
+
 })();
